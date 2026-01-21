@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Taksh Enterprise – Services</title>
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" 
+        content="default-src 'self'; 
+                 script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; 
+                 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+                 font-src 'self' https://fonts.gstatic.com; 
+                 img-src 'self' data: https:; 
+                 frame-src https://www.google.com; 
+                 connect-src 'self';">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <!-- HTTPS Enforcement -->
+  <script>
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+    }
+  </script>
+
+  <!-- TAILWIND CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700&family=Electrolize&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Electrolize', sans-serif;
+    }
+    .nav-item {
+      font-family: 'Electrolize', sans-serif;
+      padding: 8px 18px;
+      border-radius: 999px;
+      transition: all 0.3s ease;
+      color: #0B2C4D;
+    }
+    .nav-item:hover{
+        background: #B3D9FF;
+        color: #0B2C4D;
+    }
+    .nav-item.active {
+      background: #2F86EA;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+<!-- ================= NAVBAR ================= -->
+<header class="bg-[#DDF3FF] sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <!-- Brand -->
+    <div class="font-['El_Messiri'] text-2xl font-bold text-[#0B2C4D]">
+      Taksh Enterprise
+    </div>
+
+    <!-- Navigation -->
+    <div class="flex gap-6 flex-wrap justify-center">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="aboutus9.html" class="nav-item">About us</a>
+      <a href="products8.html" class="nav-item">Products</a>
+      <a href="services6.html" class="nav-item active">Services</a>
+      <a href="brands6.html" class="nav-item">Brands</a>
+      <a href="contact8.html" class="nav-item">Contact</a>
+    </div>
+
+  </nav>
+</header>
+
+<!-- ================= WHAT WE OFFER ================= -->
+<section class="relative bg-[#eaf6ff] border border-[rgba(0,0,0,0.1)]">
+
+  <!-- Heading -->
+  <div class="text-center py-32 px-6">
+    <h1 class="font-['El_Messiri'] text-[64px] font-bold">
+      What We Offer
+    </h1>
+    <p class="font-['Electrolize'] text-[28px] mt-4 max-w-[900px] mx-auto">
+      Professional IT hardware services for retail, corporate, and institutional clients
+    </p>
+  </div>
+
+  <!-- ================= SERVICE 1 ================= -->
+  <div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20">
+      <div class="w-[513px] h-[586px] rounded-[26px] overflow-hidden border-2 border-[#114980] shadow-lg">
+        <img src="corps.png" class="w-full h-full object-cover" alt="Corporate IT Solutions">
+      </div>
+      <div class="max-w-[720px]">
+        <h2 class="font-['El_Messiri'] text-[56px] font-bold">Corporate IT Solutions</h2>
+        <p class="font-['Electrolize'] text-[26px] mt-4">
+          End-to-end IT hardware procurement and deployment services for businesses
+        </p>
+        <ul class="font-['Electrolize'] text-[22px] mt-6 space-y-1">
+          <li>✓ Bulk IT hardware supply</li>
+          <li>✓ Infrastructure planning & deployment</li>
+          <li>✓ Enterprise networking</li>
+          <li>✓ Volume-based pricing</li>
+          <li>✓ Dedicated account management</li>
+        </ul>
+        <button onclick="openServiceWhatsApp('Corporate IT Solutions')" class="inline-block mt-8 px-10 py-4 bg-[#1f568d] text-white text-xl rounded-2xl hover:bg-[#163f6a] hover:scale-105 transition">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SERVICE 2 ================= -->
+  <div class="bg-[#f5fbff] py-24">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-20">
+      <div class="max-w-[720px]">
+        <h2 class="font-['El_Messiri'] text-[56px] font-bold">Institutional Supply</h2>
+        <p class="font-['Electrolize'] text-[26px] mt-4">
+          Specialized IT solutions for educational and government institutions
+        </p>
+        <ul class="font-['Electrolize'] text-[22px] mt-6 space-y-1">
+          <li>✓ Computer lab setup</li>
+          <li>✓ Smart classroom solutions</li>
+          <li>✓ Institutional tenders</li>
+          <li>✓ Scalable infrastructure</li>
+          <li>✓ Post-deployment support</li>
+        </ul>
+        <button onclick="openServiceWhatsApp('Institutional Supply')" class="inline-block mt-8 px-10 py-4 bg-[#1f568d] text-white text-xl rounded-2xl hover:bg-[#163f6a] hover:scale-105 transition">
+          Learn More
+        </button>
+      </div>
+      <div class="w-[513px] h-[586px] rounded-[26px] overflow-hidden border-2 border-[#114980] shadow-lg">
+        <img src="institutional.jpg" class="w-full h-full object-cover" alt="Institutional Supply">
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SERVICE 3 ================= -->
+  <div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20">
+      <div class="w-[513px] h-[586px] rounded-[26px] overflow-hidden border-2 border-[#114980] shadow-lg">
+        <img src="conslt.jpg" class="w-full h-full object-cover" alt="IT Consultation">
+      </div>
+      <div class="max-w-[720px]">
+        <h2 class="font-['El_Messiri'] text-[56px] font-bold">IT Consultation</h2>
+        <p class="font-['Electrolize'] text-[26px] mt-4">
+          Expert guidance to help you make informed IT decisions
+        </p>
+        <ul class="font-['Electrolize'] text-[22px] mt-6 space-y-1">
+          <li>✓ Technology assessment</li>
+          <li>✓ Budget planning</li>
+          <li>✓ Product evaluation</li>
+          <li>✓ Upgrade planning</li>
+          <li>✓ Long-term IT roadmap</li>
+        </ul>
+        <button onclick="openServiceWhatsApp('IT Consultation')" class="inline-block mt-8 px-10 py-4 bg-[#1f568d] text-white text-xl rounded-2xl hover:bg-[#163f6a] hover:scale-105 transition">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SERVICE 4 ================= -->
+  <div class="bg-[#f5fbff] py-24">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-20">
+      <div class="max-w-[720px]">
+        <h2 class="font-['El_Messiri'] text-[56px] font-bold">Custom System Building</h2>
+        <p class="font-['Electrolize'] text-[26px] mt-4">
+          Tailor-made PCs built for performance and budget
+        </p>
+        <ul class="font-['Electrolize'] text-[22px] mt-6 space-y-1">
+          <li>✓ Gaming & workstation PCs</li>
+          <li>✓ Component-level customization</li>
+          <li>✓ Thermal optimization</li>
+          <li>✓ Upgrade-ready builds</li>
+          <li>✓ Performance testing</li>
+        </ul>
+        <button onclick="openServiceWhatsApp('Custom System Building')" class="inline-block mt-8 px-10 py-4 bg-[#1f568d] text-white text-xl rounded-2xl hover:bg-[#163f6a] hover:scale-105 transition">
+          Learn More
+        </button>
+      </div>
+      <div class="w-[513px] h-[586px] rounded-[26px] overflow-hidden border-2 border-[#114980] shadow-lg">
+        <img src="cpucust.jpg" class="w-full h-full object-cover" alt="Custom System Building">
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SERVICE 5 ================= -->
+  <div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20">
+      <div class="w-[513px] h-[586px] rounded-[26px] overflow-hidden border-2 border-[#114980] shadow-lg">
+        <img src="contract.jpg" class="w-full h-full object-cover" alt="AMC">
+      </div>
+      <div class="max-w-[720px]">
+        <h2 class="font-['El_Messiri'] text-[56px] font-bold">
+          Annual Maintenance Contracts (AMC)
+        </h2>
+        <p class="font-['Electrolize'] text-[26px] mt-4">
+          Proactive maintenance for uninterrupted IT operations
+        </p>
+        <ul class="font-['Electrolize'] text-[22px] mt-6 space-y-1">
+          <li>✓ Preventive maintenance</li>
+          <li>✓ Priority service response</li>
+          <li>✓ On-site & remote support</li>
+          <li>✓ Reduced downtime</li>
+          <li>✓ Transparent reporting</li>
+        </ul>
+        <button onclick="openServiceWhatsApp('Annual Maintenance Contracts')" class="inline-block mt-8 px-10 py-4 bg-[#1f568d] text-white text-xl rounded-2xl hover:bg-[#163f6a] hover:scale-105 transition">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SERVICE 6 ================= -->
+  <div class="bg-[#f5fbff] py-24">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-20">
+      <div class="max-w-[720px]">
+        <h2 class="font-['El_Messiri'] text-[56px] font-bold">
+          Repair & Technical Support
+        </h2>
+        <p class="font-['Electrolize'] text-[26px] mt-4">
+          Complete repair and servicing across all IT products
+        </p>
+        <ul class="font-['Electrolize'] text-[22px] mt-6 space-y-1">
+          <li>✓ Laptop & desktop repairs</li>
+          <li>✓ Printer & peripheral servicing</li>
+          <li>✓ Networking repairs</li>
+          <li>✓ CCTV support</li>
+          <li>✓ Fast turnaround</li>
+        </ul>
+        <button onclick="openServiceWhatsApp('Repair & Technical Support')" class="inline-block mt-8 px-10 py-4 bg-[#1f568d] text-white text-xl rounded-2xl hover:bg-[#163f6a] hover:scale-105 transition">
+          Learn More
+        </button>
+      </div>
+      <div class="w-[513px] h-[586px] rounded-[26px] overflow-hidden border-2 border-[#114980] shadow-lg">
+        <img src="repair.jpg" class="w-full h-full object-cover" alt="Repair Support">
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SERVICE 7 ================= -->
+  <div class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-20">
+      <div class="w-[513px] h-[586px] rounded-[26px] overflow-hidden border-2 border-[#114980] shadow-lg">
+        <img src="os.jpg" class="w-full h-full object-cover" alt="Software Installation">
+      </div>
+      <div class="max-w-[720px]">
+        <h2 class="font-['El_Messiri'] text-[56px] font-bold">
+          Software & OS Installation
+        </h2>
+        <p class="font-['Electrolize'] text-[26px] mt-4">
+          Secure system setup and performance optimization
+        </p>
+        <ul class="font-['Electrolize'] text-[22px] mt-6 space-y-1">
+          <li>✓ OS installation & upgrades</li>
+          <li>✓ Licensed software setup</li>
+          <li>✓ System optimization</li>
+          <li>✓ Security configuration</li>
+          <li>✓ Data backup support</li>
+        </ul>
+        <button onclick="openServiceWhatsApp('Software & OS Installation')" class="inline-block mt-8 px-10 py-4 bg-[#1f568d] text-white text-xl rounded-2xl hover:bg-[#163f6a] hover:scale-105 transition">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SERVICE 8 ================= -->
+  <div class="bg-[#f5fbff] py-24">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-20">
+      <div class="max-w-[720px]">
+        <h2 class="font-['El_Messiri'] text-[56px] font-bold">
+          Refurbished IT Products
+        </h2>
+        <p class="font-['Electrolize'] text-[26px] mt-4">
+          Affordable, sustainable refurbished IT solutions
+        </p>
+        <ul class="font-['Electrolize'] text-[22px] mt-6 space-y-1">
+          <li>✓ Certified refurbished systems</li>
+          <li>✓ Buy-back & exchange</li>
+          <li>✓ Warranty-backed products</li>
+          <li>✓ Bulk enterprise supply</li>
+          <li>✓ Eco-friendly IT</li>
+        </ul>
+        <button onclick="openServiceWhatsApp('Refurbished IT Products')" class="inline-block mt-8 px-10 py-4 bg-[#1f568d] text-white text-xl rounded-2xl hover:bg-[#163f6a] hover:scale-105 transition">
+          Learn More
+        </button>
+      </div>
+      <div class="w-[513px] h-[586px] rounded-[26px] overflow-hidden border-2 border-[#114980] shadow-lg">
+        <img src="refurb.jpg" class="w-full h-full object-cover" alt="Refurbished Products">
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ================= HOW WE WORK ================= -->
+<section class="w-full bg-white px-6 py-24">
+  <div class="max-w-[1300px] mx-auto text-center">
+    <h2 class="font-['El_Messiri'] text-[52px] font-bold text-[#0b3c5d]">
+      How We Work
+    </h2>
+    <p class="font-['Electrolize'] text-[22px] text-[#4a5d73] mt-4 max-w-[720px] mx-auto">
+      Simple, transparent process from consultation to delivery
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 text-left">
+      <div class="bg-[#f3f9ff] rounded-[24px] p-10 hover:-translate-y-2 transition">
+        <p class="font-['Electrolize'] text-[56px] text-[#4aa3ff]">01</p>
+        <h3 class="font-['El_Messiri'] text-[26px] font-bold mt-4">Consultation</h3>
+        <p class="font-['Electrolize'] text-[18px] mt-3">
+          Share your requirements with our experts
+        </p>
+      </div>
+      <div class="bg-[#f3f9ff] rounded-[24px] p-10 hover:-translate-y-2 transition">
+        <p class="font-['Electrolize'] text-[56px] text-[#4aa3ff]">02</p>
+        <h3 class="font-['El_Messiri'] text-[26px] font-bold mt-4">Recommendation</h3>
+        <p class="font-['Electrolize'] text-[18px] mt-3">
+          Receive tailored product suggestions and quotes
+        </p>
+      </div>
+      <div class="bg-[#f3f9ff] rounded-[24px] p-10 hover:-translate-y-2 transition">
+        <p class="font-['Electrolize'] text-[56px] text-[#4aa3ff]">03</p>
+        <h3 class="font-['El_Messiri'] text-[26px] font-bold mt-4">Order</h3>
+        <p class="font-['Electrolize'] text-[18px] mt-3">
+          Confirm your order with flexible payment options
+        </p>
+      </div>
+      <div class="bg-[#f3f9ff] rounded-[24px] p-10 hover:-translate-y-2 transition">
+        <p class="font-['Electrolize'] text-[56px] text-[#4aa3ff]">04</p>
+        <h3 class="font-['El_Messiri'] text-[26px] font-bold mt-4">Delivery</h3>
+        <p class="font-['Electrolize'] text-[18px] mt-3">
+          Get your products delivered and set up
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= READY TO GET STARTED ================= -->
+<section class="w-full px-6 py-28 text-center bg-gradient-to-br from-[#114980] via-[#2A81E8] to-[#3FA9F5]">
+  <h2 class="font-['El_Messiri'] text-[52px] font-bold text-white">
+    Ready to Get Started?
+  </h2>
+  <p class="font-['Electrolize'] text-[22px] text-white/90 mt-6 max-w-[900px] mx-auto">
+    Let's discuss your IT hardware needs and find the perfect solution for your business.
+  </p>
+  <button onclick="openConsultationWhatsApp()" class="inline-flex items-center gap-4 mt-12 px-10 py-5 bg-white text-[#114980] text-[20px] rounded-2xl hover:scale-105 hover:bg-[#f2f7ff] transition">
+    Request a Consultation
+    <span class="text-2xl">→</span>
+  </button>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-[#0B3C5D] text-white pt-20 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+    <div>
+      <img src="Taksh_-_Combine_Logo[1].png" class="w-40 mb-6" alt="Taksh Enterprise Logo">
+      <p class="text-white/80 text-sm">Trusted IT hardware partner since 1999.</p>
+    </div>
+
+    <div>
+      <h4 class="font-['El_Messiri'] text-xl font-bold mb-6">Quick Links</h4>
+      <ul class="space-y-3 text-white/80">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="aboutus9.html" class="hover:underline">About Us</a></li>
+        <li><a href="products8.html" class="hover:underline">Products</a></li>
+        <li><a href="services6.html" class="hover:underline">Services</a></li>
+        <li><a href="brands6.html" class="hover:underline">Brands</a></li>
+        <li><a href="contact8.html" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-['El_Messiri'] text-xl font-bold mb-6">Products</h4>
+      <ul class="space-y-3 text-white/80">
+        <li><a href="products8.html#laptops" class="hover:underline">Laptops</a></li>
+        <li><a href="products8.html#desktops" class="hover:underline">Desktops</a></li>
+        <li><a href="products8.html#accessories" class="hover:underline">Accessories</a></li>
+        <li><a href="products8.html#peripherals" class="hover:underline">Peripherals</a></li>
+        <li><a href="products8.html#custom-solutions" class="hover:underline">Custom Solutions</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-['El_Messiri'] text-xl font-bold mb-6">Contact</h4>
+      <p class="text-white/80 text-sm">
+        GF, B/15, Sardar Mall,<br>Nikol, Ahmedabad, Gujarat<br>India - 382350<br><br>
+        <a href="tel:+919099973373" class="hover:underline">+91 9099973373</a><br>
+        <a href="#" onclick="openSecureEmail(); return false;" class="hover:underline">takshenterprise1712@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="h-[180px] rounded-xl overflow-hidden border border-white/20">
+      <iframe
+        src="https://www.google.com/maps?q=SARDAR%20PATEL%20MALL,%20Nikol%20Gam%20Rd,%20Suradhara%20Society,%20Thakkarbapanagar,%20Khodiar%20Nagar,%20Ahmedabad,%20Gujarat%20382350,%20India&output=embed"
+        class="w-full h-full border-0"
+        loading="lazy"
+        title="Taksh Enterprise Location"
+        referrerpolicy="no-referrer-when-downgrade">
+     </iframe>
+    </div>
+
+  </div>
+
+  <div class="border-t border-white/20 mt-16 py-6 text-center text-white/70 text-sm">
+    © 2025 Taksh Enterprise. All rights reserved.
+  </div>
+</footer>
+<!-- ================= SECURE JAVASCRIPT ================= -->
+<script>
+(function() {
+  'use strict';
+
+  const WHATSAPP_NUMBER = atob("OTE5MDk5OTczMzcz");
+
+  function sanitizeInput(str) {
+    if (typeof str !== 'string') return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML.replace(/[<>'"]/g, '').substring(0, 500);
+  }
+
+  window.openSecureEmail = function() {
+    const validEmail = 'takshenterprise1712@gmail.com';
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    if (!emailRegex.test(validEmail)) {
+      console.error('Invalid email format');
+      return;
+    }
+    
+    const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(validEmail);
+    const newWindow = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+    
+    if (!newWindow) {
+      alert('Please allow pop-ups to send us an email');
+    }
+  };
+
+  function openSecureWhatsApp(message) {
+    if (typeof message !== 'string' || message.length > 2000) {
+      console.error('Invalid message');
+      return;
+    }
+    
+    const phoneRegex = /^[0-9]{10,15}$/;
+    if (!phoneRegex.test(WHATSAPP_NUMBER)) {
+      console.error('Invalid phone number');
+      return;
+    }
+    
+    const sanitized = sanitizeInput(message).substring(0, 2000);
+    const encodedMessage = encodeURIComponent(sanitized);
+    const url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodedMessage;
+    
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    if (!newWindow) {
+      alert('Please allow pop-ups to contact us via WhatsApp');
+    }
+  }
+
+  window.openServiceWhatsApp = function(serviceName) {
+    const sanitizedService = sanitizeInput(serviceName);
+    const message =
+      "Hello Taksh Enterprise,\n\n" +
+      "I would like to know more about your *" + sanitizedService + "* service.\n\n" +
+      "Please guide me with details, pricing, and next steps.\n\n" +
+      "Thank you!";
+
+    openSecureWhatsApp(message);
+  };
+
+  window.openConsultationWhatsApp = function() {
+    const message =
+      "Hello Taksh Enterprise,\n\n" +
+      "I would like to get an expert consultation regarding your IT products and services.\n\n" +
+      "Please guide me on the best options available.\n\n" +
+      "Thank you!";
+
+    openSecureWhatsApp(message);
+  };
+
+})();
+</script>
+
+</body>
+</html>

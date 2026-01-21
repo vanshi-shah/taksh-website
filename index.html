@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taksh Enterprise</title>
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" 
+        content="default-src 'self'; 
+                 script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; 
+                 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+                 font-src 'self' https://fonts.gstatic.com; 
+                 img-src 'self' data: https:; 
+                 frame-src https://www.google.com; 
+                 connect-src 'self';">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <!-- HTTPS Enforcement -->
+  <script>
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+    }
+  </script>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    .nav-item {
+      font-family: 'Electrolize', sans-serif;
+      padding: 8px 18px;
+      border-radius: 999px;
+      transition: all 0.3s ease;
+      color: #0B2C4D;
+    }
+    .nav-item:hover{
+        background: #B3D9FF;
+        color: #0B2C4D;
+    }
+    .nav-item.active {
+      background: #2F86EA;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+
+<!-- ================= NAVBAR ================= -->
+<header class="bg-[#DDF3FF] sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <!-- Brand -->
+    <div class="font-['El_Messiri'] text-2xl font-bold text-[#0B2C4D]">
+      Taksh Enterprise
+    </div>
+
+    <!-- Navigation -->
+    <div class="flex gap-6 flex-wrap justify-center">
+      <a href="index.html" class="nav-item active">Home</a>
+      <a href="aboutus9.html" class="nav-item">About us</a>
+      <a href="products8.html" class="nav-item">Products</a>
+      <a href="services6.html" class="nav-item">Services</a>
+      <a href="brands6.html" class="nav-item">Brands</a>
+      <a href="contact8.html" class="nav-item">Contact</a>
+    </div>
+
+  </nav>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="min-h-[90vh] bg-gradient-to-br from-[#0B3C6F] via-[#165FBE] to-[#2F86EA] flex items-center justify-center px-6">
+  <div class="text-center max-w-[1100px]">
+    <h1 class="text-white text-[56px] font-extrabold leading-tight">
+      Powering Your Digital Future <br /> with Premium IT Solutions
+    </h1>
+
+    <p class="mt-6 text-white/90 text-[18px]">
+      From individual professionals to large enterprises, we deliver
+      top-quality laptops, desktops, and complete IT hardware solutions
+      that drive your success.
+    </p>
+
+    <div class="mt-10 flex justify-center gap-6">
+      <a href="products7.html" class="bg-white px-8 py-4 rounded-xl font-semibold hover:scale-105 transition inline-block">
+        Explore Products →
+        </a>
+
+      <a href="contact7.html" class="border-2 border-white px-8 py-4 rounded-xl text-white hover:bg-white hover:text-[#0B3C6F] transition inline-block">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<section class="px-4 md:px-12 py-24">
+  <h2 class="text-center text-4xl md:text-6xl font-bold text-[#0b2c4d]">
+    Our Product Range
+  </h2>
+
+  <p class="mt-6 text-center text-lg md:text-2xl text-[#5a6b7b]">
+    Comprehensive IT hardware solutions
+  </p>
+
+  <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[1200px] mx-auto">
+    <!-- Card -->
+    <div class="rounded-2xl overflow-hidden border hover:shadow-xl transition">
+      <div class="relative h-[220px]">
+        <img src="2.jpg" class="w-full h-full object-cover" alt="Laptops" />
+        <div class="absolute inset-0 bg-black/25"></div>
+      </div>
+      <div class="p-8">
+        <h3 class="text-3xl font-semibold text-[#0b2c4d]">Laptops</h3>
+        <p class="mt-4">Wide range of laptops for business, gaming, and personal use</p>
+        <a href="products7.html#laptops" class="mt-6 text-blue-600 font-semibold inline-block">
+            Learn More →
+        </a>
+</div>
+    </div>
+
+    <div class="rounded-2xl overflow-hidden border hover:shadow-xl transition">
+      <div class="relative h-[220px]">
+        <img src="3.jpg" class="w-full h-full object-cover" alt="Desktops" />
+        <div class="absolute inset-0 bg-black/25"></div>
+      </div>
+      <div class="p-8">
+        <h3 class="text-3xl font-semibold text-[#0b2c4d]">Desktops</h3>
+        <p class="mt-4">High-performance desktops and workstations</p>
+        <a href="products7.html#desktops" class="mt-6 text-blue-600 font-semibold inline-block">
+            Learn More →
+        </a>
+      </div>
+    </div>
+
+    <div class="rounded-2xl overflow-hidden border hover:shadow-xl transition">
+      <div class="relative h-[220px]">
+        <img src="4.jpg" class="w-full h-full object-cover" alt="IT Solutions" />
+        <div class="absolute inset-0 bg-black/25"></div>
+      </div>
+      <div class="p-8">
+        <h3 class="text-3xl font-semibold text-[#0b2c4d]">IT Solutions</h3>
+        <p class="mt-4">Complete IT solutions for corporates</p>
+        <a href="products7.html#desktops" class="mt-6 text-blue-600 font-semibold inline-block">
+         Learn More →
+        </a>
+      </div>
+    </div>
+
+    <div class="rounded-2xl overflow-hidden border hover:shadow-xl transition">
+      <div class="relative h-[220px]">
+        <img src="5.jpg" class="w-full h-full object-cover" alt="Accessories" />
+        <div class="absolute inset-0 bg-black/25"></div>
+      </div>
+      <div class="p-8">
+        <h3 class="text-3xl font-semibold text-[#0b2c4d]">Accessories</h3>
+        <p class="mt-4">Premium peripherals and components</p>
+        <a href="products7.html#accessories" class="mt-6 text-blue-600 font-semibold inline-block">
+         Learn More →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section class="bg-[rgba(190,232,255,0.53)] py-28">
+  <h2 class="text-center text-[52px] font-bold text-[#20027a]">
+    Why Choose Taksh Enterprise
+  </h2>
+
+  <div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[1200px] mx-auto px-6">
+    <div class="bg-white rounded-2xl p-14 text-center shadow-xl hover:-translate-y-2 transition">
+      <p class="text-[20px] font-semibold">Trusted Since</p>
+      <p class="text-[32px] font-bold mt-2">1999</p>
+    </div>
+
+    <div class="bg-white rounded-2xl p-14 text-center shadow-xl hover:-translate-y-2 transition">
+      <p class="text-[20px] font-semibold">Quality</p>
+      <p class="text-[32px] font-bold mt-2">Assurance</p>
+    </div>
+
+    <div class="bg-white rounded-2xl p-14 text-center shadow-xl hover:-translate-y-2 transition">
+      <p class="text-[20px] font-semibold">Expert</p>
+      <p class="text-[32px] font-bold mt-2">Support</p>
+    </div>
+
+    <div class="bg-white rounded-2xl p-14 text-center shadow-xl hover:-translate-y-2 transition">
+      <p class="text-[20px] font-semibold">Competitive</p>
+      <p class="text-[32px] font-bold mt-2">Pricing</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="px-10 py-28">
+  <h2 class="text-center text-[56px] font-bold">
+    What Our Clients Say
+  </h2>
+
+  <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 max-w-[1300px] mx-auto">
+
+    <!-- Testimonial 1 -->
+    <div class="border rounded-2xl p-10 hover:-translate-y-2 transition shadow-lg">
+      <div class="text-[28px] text-yellow-400">★★★★★</div>
+      <p class="mt-6">
+        Taksh Enterprise has been our reliable partner for IT procurement.
+        Their procurement team understands enterprise needs and provides
+        excellent post-sale support.
+      </p>
+
+      <div class="mt-8 border-t pt-6">
+        <p class="font-bold">Rajesh Kumar</p>
+        <p class="text-sm">IT Manager</p>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="border rounded-2xl p-10 hover:-translate-y-2 transition shadow-lg">
+      <div class="text-[28px] text-yellow-400">★★★★★</div>
+      <p class="mt-6">
+        I was impressed by the fast turnaround and competitive pricing
+        that perfectly fit my small-business budget.
+      </p>
+
+      <div class="mt-8 border-t pt-6">
+        <p class="font-bold">Priya Sharma</p>
+        <p class="text-sm">Business Owner</p>
+      </div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="border rounded-2xl p-10 hover:-translate-y-2 transition shadow-lg">
+      <div class="text-[28px] text-yellow-400">★★★★★</div>
+      <p class="mt-6">
+        Their equipment improved my rendering times and overall productivity.
+        As a designer, having reliable hardware is crucial and Taksh Enterprise delivered.
+      </p>
+
+      <div class="mt-8 border-t pt-6">
+        <p class="font-bold">Amit Patel</p>
+        <p class="text-sm">Designer</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-[#0B3C5D] text-white pt-20 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+    <div>
+      <img src="Taksh_-_Combine_Logo[1].png" class="w-40 mb-6" alt="Taksh Enterprise Logo">
+      <p class="text-white/80 text-sm">Trusted IT hardware partner since 1999.</p>
+    </div>
+
+    <div>
+      <h4 class="font-['El_Messiri'] text-xl font-bold mb-6">Quick Links</h4>
+      <ul class="space-y-3 text-white/80">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="aboutus9.html" class="hover:underline">About Us</a></li>
+        <li><a href="products8.html" class="hover:underline">Products</a></li>
+        <li><a href="services6.html" class="hover:underline">Services</a></li>
+        <li><a href="brands6.html" class="hover:underline">Brands</a></li>
+        <li><a href="contact8.html" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-['El_Messiri'] text-xl font-bold mb-6">Products</h4>
+      <ul class="space-y-3 text-white/80">
+        <li><a href="products8.html#laptops" class="hover:underline">Laptops</a></li>
+        <li><a href="products8.html#desktops" class="hover:underline">Desktops</a></li>
+        <li><a href="products8.html#accessories" class="hover:underline">Accessories</a></li>
+        <li><a href="products8.html#peripherals" class="hover:underline">Peripherals</a></li>
+        <li><a href="products8.html#custom-solutions" class="hover:underline">Custom Solutions</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-['El_Messiri'] text-xl font-bold mb-6">Contact</h4>
+      <p class="text-white/80 text-sm">
+        GF, B/15, Sardar Mall,<br>Nikol, Ahmedabad, Gujarat<br>India - 382350<br><br>
+        <a href="tel:+919099973373" class="hover:underline">+91 9099973373</a><br>
+        <a href="#" onclick="openSecureEmail(); return false;" class="hover:underline">takshenterprise1712@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="h-[180px] rounded-xl overflow-hidden border border-white/20">
+      <iframe
+        src="https://www.google.com/maps?q=SARDAR%20PATEL%20MALL,%20Nikol%20Gam%20Rd,%20Suradhara%20Society,%20Thakkarbapanagar,%20Khodiar%20Nagar,%20Ahmedabad,%20Gujarat%20382350,%20India&output=embed"
+        class="w-full h-full border-0"
+        loading="lazy"
+        title="Taksh Enterprise Location"
+        referrerpolicy="no-referrer-when-downgrade">
+     </iframe>
+    </div>
+
+  </div>
+
+  <div class="border-t border-white/20 mt-16 py-6 text-center text-white/70 text-sm">
+    © 2025 Taksh Enterprise. All rights reserved.
+  </div>
+</footer>
+
+<!-- ================= SECURE JAVASCRIPT ================= -->
+<script>
+(function() {
+  'use strict';
+
+  // Secure email function with validation
+  window.openSecureEmail = function() {
+    const validEmail = 'takshenterprise1712@gmail.com';
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    if (!emailRegex.test(validEmail)) {
+      console.error('Invalid email format');
+      return;
+    }
+    
+    const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(validEmail);
+    const newWindow = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+    
+    if (!newWindow) {
+      alert('Please allow pop-ups to send us an email');
+    }
+  };
+
+  // Product image sizing fix
+  document.querySelectorAll("section img").forEach(function(img) {
+    const src = img.getAttribute("src") || "";
+    if (src.includes("4.jpg")) return;
+    img.style.objectFit = "contain";
+  });
+
+})();
+</script>
+
+</body>
+</html>

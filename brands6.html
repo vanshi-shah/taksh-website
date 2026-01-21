@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trusted Brands – Taksh Enterprise</title>
+
+<!-- Security Headers -->
+<meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; 
+               script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; 
+               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+               font-src 'self' https://fonts.gstatic.com; 
+               img-src 'self' data: https:; 
+               frame-src https://www.google.com; 
+               connect-src 'self';">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+<!-- HTTPS Enforcement -->
+<script>
+  if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+    location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+  }
+</script>
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600;700&family=Electrolize&display=swap" rel="stylesheet">
+
+<!-- TAILWIND CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  .hover-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .hover-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(17,73,128,0.35);
+  }
+  .nav-item {
+    font-family: 'Electrolize', sans-serif;
+    padding: 8px 18px;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+    color: #0B2C4D;
+  }
+  .nav-item:hover {
+      background: #B3D9FF;
+      color: #0B2C4D;
+  }
+  .nav-item.active {
+    background: #2F86EA;
+    color: #fff;
+  }
+  .brand-logo {
+    max-height: 64px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  @media (min-width: 768px) {
+    .brand-logo {
+      max-height: 80px;
+    }
+  }
+  .brand-logo:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0 10px 22px rgba(17,73,128,0.35));
+  }
+  .filter-btn {
+    padding: 0.6rem 1.25rem;
+    border-radius: 0.75rem;
+    background: rgba(255,255,255,0.85);
+    font-family: Electrolize;
+    transition: all 0.25s ease;
+  }
+  .filter-btn.active {
+    background: #114980;
+    color: white;
+    box-shadow: 0 10px 20px rgba(17,73,128,0.35);
+  }
+  .filter-btn:hover {
+    transform: translateY(-2px);
+  }
+</style>
+</head>
+
+<body class="bg-[#f5fcff] text-black">
+
+<!-- ================= NAVBAR ================= -->
+<header class="bg-[#DDF3FF] sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <!-- Brand -->
+    <div class="font-['El_Messiri'] text-2xl font-bold text-[#0B2C4D]">
+      Taksh Enterprise
+    </div>
+
+    <!-- Navigation -->
+    <div class="flex gap-6 flex-wrap justify-center">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="aboutus9.html" class="nav-item">About us</a>
+      <a href="products8.html" class="nav-item">Products</a>
+      <a href="services6.html" class="nav-item">Services</a>
+      <a href="brands6.html" class="nav-item active">Brands</a>
+      <a href="contact8.html" class="nav-item">Contact</a>
+    </div>
+
+  </nav>
+</header>
+
+<!-- ================= HEADER ================= -->
+<section class="px-6 md:px-10 pt-14 md:pt-16">
+  <h1 class="text-4xl md:text-[64px] leading-tight" style="font-family:El Messiri;">
+    Trusted Brands, Proven Performance
+  </h1>
+  <p class="mt-4 md:mt-6 text-lg md:text-[32px]" style="font-family:Electrolize;">
+    We work with leading technology brands to deliver dependable, high-quality IT solutions backed by professional service.
+  </p>
+  <div class="mt-10 md:mt-16 w-full max-w-[420px] h-[120px] md:h-[150px] rounded-2xl flex items-center justify-center hover-card"
+       style="background-image:linear-gradient(109deg,#114980,#2A81E8,#3FA9F5);">
+    <p class="text-white text-3xl md:text-[48px] font-semibold text-center" style="font-family:El Messiri;">
+      Brands We Deal In
+    </p>
+  </div>
+</section>
+
+<!-- ================= BRAND CATEGORY TABLE ================= -->
+<section class="mt-20 px-6 md:px-10 py-16 bg-gradient-to-r from-[rgba(17,73,128,0.6)] via-[rgba(42,129,232,0.6)] to-[rgba(63,169,245,0.6)]">
+  <h2 class="text-3xl md:text-[48px] font-semibold mb-8" style="font-family:El Messiri;">
+    Brand Category Overview
+  </h2>
+  <div class="flex flex-wrap gap-3 mb-8">
+    <button onclick="toggleFilter('All')" class="filter-btn active">All</button>
+    <button onclick="toggleFilter('Motherboard')" class="filter-btn">Motherboard</button>
+    <button onclick="toggleFilter('Graphic Card')" class="filter-btn">Graphic Card</button>
+    <button onclick="toggleFilter('Processor')" class="filter-btn">Processor</button>
+    <button onclick="toggleFilter('RAM')" class="filter-btn">RAM</button>
+    <button onclick="toggleFilter('Storage')" class="filter-btn">SSD / HDD</button>
+    <button onclick="toggleFilter('Monitors / Displays')" class="filter-btn">Monitors / Displays</button>
+    <button onclick="toggleFilter('Laptops / Desktops')" class="filter-btn">Laptops / Desktops</button>
+    <button onclick="toggleFilter('Networking')" class="filter-btn">Networking</button>
+    <button onclick="toggleFilter('Peripherals & Accessories')" class="filter-btn">Peripherals & Accessories</button>
+    <button onclick="toggleFilter('Enterprise & Software Ecosystem')" class="filter-btn">Enterprise & Software Ecosystem</button>
+  </div>
+  <div class="overflow-x-auto rounded-2xl bg-white/70 backdrop-blur-md">
+    <table class="min-w-full border-collapse">
+      <thead>
+        <tr class="bg-[#114980]/10">
+          <th class="px-6 py-4 text-left text-xl md:text-[26px]" style="font-family:El Messiri;">Category</th>
+          <th class="px-6 py-4 text-left text-xl md:text-[26px]" style="font-family:El Messiri;">Brands</th>
+        </tr>
+      </thead>
+      <tbody id="brandTable" class="text-base md:text-[22px]" style="font-family:Electrolize;"></tbody>
+    </table>
+  </div>
+</section>
+
+<p class="text-center text-xl md:text-2xl font-semibold mt-10 mb-10" style="font-family:El Messiri;">Individual Brands</p>
+
+<!-- ================= BRAND LOGOS GRID ================= -->
+<section class="px-6 md:px-10 py-16 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-10 place-items-center">
+      <img src="acer.jpg" alt="Acer" class="brand-logo" data-brand="Acer"/>
+      <img src="asus.jpg" alt="ASUS" class="brand-logo" data-brand="ASUS"/>
+      <img src="lenovo.jpg" alt="Lenovo" class="brand-logo" data-brand="Lenovo"/>
+      <img src="dell.jpg" alt="Dell" class="brand-logo" data-brand="Dell"/>
+      <img src="hp.jpg" alt="HP" class="brand-logo" data-brand="HP"/>
+      <img src="samsung.jpg" alt="Samsung" class="brand-logo" data-brand="Samsung"/>
+      <img src="lg.jpg" alt="LG" class="brand-logo" data-brand="LG"/>
+      <img src="apple.jpg" alt="Apple" class="brand-logo" data-brand="Apple"/>
+      <img src="intel.jpg" alt="Intel" class="brand-logo" data-brand="Intel"/>
+      <img src="msi.jpg" alt="MSI" class="brand-logo" data-brand="MSI"/>
+      <img src="amd.png" alt="AMD" class="brand-logo" data-brand="AMD"/>
+      <img src="kingston.jpg" alt="Kingston" class="brand-logo" data-brand="Kingston"/>
+      <img src="corsair.jpg" alt="Corsair" class="brand-logo" data-brand="Corsair"/>
+      <img src="crucial.jpg" alt="Crucial" class="brand-logo" data-brand="Crucial"/>
+      <img src="cisco.jpg" alt="Cisco" class="brand-logo" data-brand="Cisco"/>
+      <img src="seagate.jpg" alt="Seagate" class="brand-logo" data-brand="Seagate"/>
+      <img src="gigabyte.jpg" alt="Gigabyte" class="brand-logo" data-brand="Gigabyte"/>
+      <img src="lapcare.png" alt="Lapcare" class="brand-logo" data-brand="Lapcare"/>
+      <img src="xpg.jpg" alt="XPG" class="brand-logo" data-brand="XPG"/>
+      <img src="dlink.png" alt="D-Link" class="brand-logo" data-brand="D-Link"/>
+      <img src="tforce.png" alt="T-Force" class="brand-logo" data-brand="T-Force"/>
+      <img src="galaxy.png" alt="Galaxy" class="brand-logo" data-brand="Galaxy"/>
+      <img src="ryzen.png" alt="Ryzen" class="brand-logo" data-brand="Ryzen"/>
+      <img src="nvidia.png" alt="NVIDIA" class="brand-logo" data-brand="NVIDIA"/>
+      <img src="logitech.png" alt="Logitech" class="brand-logo" data-brand="Logitech"/>
+      <img src="microsoft.jpg" alt="Microsoft" class="brand-logo" data-brand="Microsoft"/>
+      <img src="westerndigital.png" alt="Western Digital" class="brand-logo" data-brand="Western Digital"/>
+      <img src="adobe.jpg" alt="Adobe" class="brand-logo" data-brand="Adobe"/>
+      <img src="other-brands.png" alt="Other Brands" class="brand-logo" data-brand="Other"/>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="w-full flex justify-center py-20 bg-white px-6">
+  <div class="text-center max-w-4xl">
+    <h2 class="text-3xl md:text-5xl font-bold mb-6" style="font-family:El Messiri;">
+      Looking for a Specific Brand?
+    </h2>
+    <p class="text-lg md:text-xl mb-10 text-gray-600" style="font-family:Electrolize;">
+      Contact us to check availability and get the best prices on products from your preferred brands.
+    </p>
+    <button onclick="openBrandWhatsApp()" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-[#2563EB] text-white shadow-xl transition hover:scale-105 hover:bg-[#1E4FD8]" style="font-family:Electrolize;">
+      Get in Touch →
+    </button>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-[#0B3C5D] text-white pt-20 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+    <div>
+      <img src="Taksh_-_Combine_Logo[1].png" class="w-40 mb-6" alt="Taksh Enterprise Logo">
+      <p class="text-white/80 text-sm">Trusted IT hardware partner since 1999.</p>
+    </div>
+
+    <div>
+      <h4 class="font-['El_Messiri'] text-xl font-bold mb-6">Quick Links</h4>
+      <ul class="space-y-3 text-white/80">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="aboutus9.html" class="hover:underline">About Us</a></li>
+        <li><a href="products8.html" class="hover:underline">Products</a></li>
+        <li><a href="services6.html" class="hover:underline">Services</a></li>
+        <li><a href="brands6.html" class="hover:underline">Brands</a></li>
+        <li><a href="contact8.html" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-['El_Messiri'] text-xl font-bold mb-6">Products</h4>
+      <ul class="space-y-3 text-white/80">
+        <li><a href="products8.html#laptops" class="hover:underline">Laptops</a></li>
+        <li><a href="products8.html#desktops" class="hover:underline">Desktops</a></li>
+        <li><a href="products8.html#accessories" class="hover:underline">Accessories</a></li>
+        <li><a href="products8.html#peripherals" class="hover:underline">Peripherals</a></li>
+        <li><a href="products8.html#custom-solutions" class="hover:underline">Custom Solutions</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-['El_Messiri'] text-xl font-bold mb-6">Contact</h4>
+      <p class="text-white/80 text-sm">
+        GF, B/15, Sardar Mall,<br>Nikol, Ahmedabad, Gujarat<br>India - 382350<br><br>
+        <a href="tel:+919099973373" class="hover:underline">+91 9099973373</a><br>
+        <a href="#" onclick="openSecureEmail(); return false;" class="hover:underline">takshenterprise1712@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="h-[180px] rounded-xl overflow-hidden border border-white/20">
+      <iframe
+        src="https://www.google.com/maps?q=SARDAR%20PATEL%20MALL,%20Nikol%20Gam%20Rd,%20Suradhara%20Society,%20Thakkarbapanagar,%20Khodiar%20Nagar,%20Ahmedabad,%20Gujarat%20382350,%20India&output=embed"
+        class="w-full h-full border-0"
+        loading="lazy"
+        title="Taksh Enterprise Location"
+        referrerpolicy="no-referrer-when-downgrade">
+     </iframe>
+    </div>
+
+  </div>
+
+  <div class="border-t border-white/20 mt-16 py-6 text-center text-white/70 text-sm">
+    © 2025 Taksh Enterprise. All rights reserved.
+  </div>
+</footer>
+
+<!-- ================= SECURE JAVASCRIPT ================= -->
+<script>
+(function() {
+  'use strict';
+
+  const WHATSAPP_NUMBER = atob("OTE5MDk5OTczMzcz");
+  const PAGE_CONTEXT = "Brands Page";
+
+  function sanitizeInput(str) {
+    if (typeof str !== 'string') return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML.replace(/[<>'"]/g, '').substring(0, 500);
+  }
+
+  window.openSecureEmail = function() {
+    const validEmail = 'takshenterprise1712@gmail.com';
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    if (!emailRegex.test(validEmail)) {
+      console.error('Invalid email format');
+      return;
+    }
+    
+    const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(validEmail);
+    const newWindow = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+    
+    if (!newWindow) {
+      alert('Please allow pop-ups to send us an email');
+    }
+  };
+
+  function openSecureWhatsApp(message) {
+    if (typeof message !== 'string' || message.length > 2000) {
+      console.error('Invalid message');
+      return;
+    }
+    
+    const phoneRegex = /^[0-9]{10,15}$/;
+    if (!phoneRegex.test(WHATSAPP_NUMBER)) {
+      console.error('Invalid phone number');
+      return;
+    }
+    
+    const sanitized = sanitizeInput(message).substring(0, 2000);
+    const encodedMessage = encodeURIComponent(sanitized);
+    const url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodedMessage;
+    
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    if (!newWindow) {
+      alert('Please allow pop-ups to contact us via WhatsApp');
+    }
+  }
+
+  const data = [
+    { category: "Motherboard", brands: "ASUS, Gigabyte, MSI" },
+    { category: "Graphic Card", brands: "NVIDIA, AMD, ASUS, Gigabyte, MSI, Galaxy" },
+    { category: "Processor", brands: "Intel, AMD Ryzen" },
+    { category: "RAM", brands: "Kingston, Corsair, Crucial, XPG, T-Force" },
+    { category: "Storage", brands: "Samsung, Kingston, Crucial, Seagate, Western Digital" },
+    { category: "Monitors / Displays", brands: "Acer, ASUS, Dell, HP, LG, Samsung" },
+    { category: "Laptops / Desktops", brands: "Acer, ASUS, Dell, HP, Lenovo, Apple" },
+    { category: "Networking", brands: "D-Link, Cisco" },
+    { category: "Peripherals & Accessories", brands: "Logitech, Lapcare" },
+    { category: "Enterprise & Software Ecosystem", brands: "Microsoft, Adobe" }
+  ];
+
+  let activeFilters = [];
+
+  function renderTable(rows) {
+    const tbody = document.getElementById("brandTable");
+    tbody.innerHTML = "";
+    rows.forEach(function(r) {
+      tbody.innerHTML += 
+        '<tr class="border-t hover:bg-[#114980]/10 transition">' +
+        '<td class="px-6 py-4">' + r.category + '</td>' +
+        '<td class="px-6 py-4">' + r.brands + '</td>' +
+        '</tr>';
+    });
+  }
+
+  window.toggleFilter = function(category) {
+    const buttons = document.querySelectorAll(".filter-btn");
+
+    if (category === "All") {
+      activeFilters = [];
+      buttons.forEach(function(btn) { btn.classList.remove("active"); });
+      buttons[0].classList.add("active");
+      renderTable(data);
+      return;
+    }
+
+    if (activeFilters.indexOf(category) > -1) {
+      activeFilters = activeFilters.filter(function(c) { return c !== category; });
+    } else {
+      activeFilters.push(category);
+    }
+
+    buttons.forEach(function(btn) {
+      btn.classList.toggle("active", activeFilters.indexOf(btn.innerText) > -1);
+    });
+
+    const filtered = activeFilters.length === 0 ? data : data.filter(function(d) {
+      return activeFilters.some(function(f) { return d.category.indexOf(f) > -1; });
+    });
+
+    renderTable(filtered);
+  };
+
+  renderTable(data);
+
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".brand-logo").forEach(function(logo) {
+      logo.addEventListener("click", function() {
+        let brand = logo.getAttribute("data-brand");
+
+        if (brand === "Other") {
+          brand = prompt("Please specify the brand name:");
+          if (!brand || !brand.trim()) return;
+        }
+
+        const sanitizedBrand = sanitizeInput(brand);
+        const message = 
+          "Hello Taksh Enterprise,\n\n" +
+          "I'm currently browsing your " + PAGE_CONTEXT + ".\n\n" +
+          "I would like to know more about:\n\n" +
+          "BRAND: " + sanitizedBrand + "\n\n" +
+          "Please share availability, pricing, and next steps.\n\n" +
+          "Thank you!";
+
+        openSecureWhatsApp(message);
+      });
+    });
+  });
+
+  window.openBrandWhatsApp = function() {
+    const message = 
+      "Hello Taksh Enterprise,\n\n" +
+      "I'm currently browsing your " + PAGE_CONTEXT + ".\n\n" +
+      "I'm interested in your IT products and brand offerings.\n\n" +
+      "Please help me with suitable options and pricing.\n\n" +
+      "Thank you!";
+
+    openSecureWhatsApp(message);
+  };
+
+})();
+</script>
+
+</body>
+</html>

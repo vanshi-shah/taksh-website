@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Taksh Enterprise | Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" 
+        content="default-src 'self'; 
+                 script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; 
+                 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+                 font-src 'self' https://fonts.gstatic.com; 
+                 img-src 'self' data: https:; 
+                 frame-src https://www.google.com; 
+                 connect-src 'self';">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <!-- HTTPS Enforcement -->
+  <script>
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+    }
+  </script>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600;700;800&family=Electrolize&display=swap" rel="stylesheet">
+
+  <style>
+    .nav-item {
+      font-family: 'Electrolize', sans-serif;
+      padding: 8px 18px;
+      border-radius: 999px;
+      transition: all 0.3s ease;
+      color: #0B2C4D;
+    }
+    .nav-item:hover{
+        background: #B3D9FF;
+        color: #0B2C4D;
+    }
+    .nav-item.active {
+      background: #2F86EA;
+      color: #fff;
+    }
+    .filter-btn {
+        padding: 8px 22px;
+        border-radius: 999px;
+        border: none;
+        background: transparent;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .filter-btn:hover {
+        background: #f1f5f9;
+    }
+    .filter-btn.active {
+        background: #2563eb;
+        color: white;
+    }
+    .product-card-hidden {
+        display: none !important;
+    }
+    body {
+      font-family: 'Electrolize', sans-serif;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    @keyframes fade-in {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.25s ease-out;
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+
+<header class="bg-[#DDF3FF] sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <!-- Brand -->
+    <div class="font-['El_Messiri'] text-2xl font-bold text-[#0B2C4D]">
+      Taksh Enterprise
+    </div>
+
+    <!-- Navigation -->
+    <div class="flex gap-6 flex-wrap justify-center">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="aboutus9.html" class="nav-item">About us</a>
+      <a href="products8.html" class="nav-item active">Products</a>
+      <a href="services6.html" class="nav-item">Services</a>
+      <a href="brands6.html" class="nav-item">Brands</a>
+      <a href="contact8.html" class="nav-item">Contact</a>
+    </div>
+
+  </nav>
+</header>
+
+<!-- PRODUCT FILTER NAV -->
+<nav class="bg-white border-b border-gray-200 shadow-sm">
+  <div class="mx-auto max-w-[1300px] px-6 py-4">
+    <ul class="flex flex-wrap gap-4">
+      <button class="filter-btn active" data-filter="all">All Products</button>
+      <button class="filter-btn" data-filter="laptops">Laptops</button>
+      <button class="filter-btn" data-filter="desktops">Desktops</button>
+      <button class="filter-btn" data-filter="accessories">Accessories</button>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= PRODUCTS ================= -->
+<section class="bg-[#ddf3ff] py-20 px-6">
+  <div class="mx-auto max-w-[1300px] grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+
+    <!-- Business Laptops -->
+    <div id="laptops" class="rounded-3xl bg-gradient-to-br from-[#3050c1] via-[#6fa8ff] to-[#1fc8e1] p-[1.5px]" data-category="laptops">
+      <div class="flex h-full flex-col rounded-3xl bg-white overflow-hidden">
+        <div class="h-[260px] overflow-hidden">
+          <img src="bslap.png" class="h-full w-full object-cover transition-transform duration-500 hover:scale-110" alt="Business Laptops">
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-3 font-['El_Messiri'] text-2xl">Business Laptops</h3>
+          <p class="mb-4 text-lg">Professional-grade laptops designed for corporate productivity and reliability.</p>
+          <ul class="mb-6 space-y-2 text-lg">
+            <li>• Intel Core i5 / i7 processors</li>
+            <li>• Long battery life</li>
+            <li>• Enterprise security features</li>
+          </ul>
+          <button class="request-quote mt-auto rounded-xl bg-[#3050c1] py-3 text-center text-xl text-white transition hover:scale-105 hover:bg-[#243e9e]" data-product="Business Laptops">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gaming Laptops -->
+    <div class="rounded-3xl bg-gradient-to-br from-[#3050c1] via-[#6fa8ff] to-[#1fc8e1] p-[1.5px]" data-category="laptops">
+      <div class="flex h-full flex-col rounded-3xl bg-white overflow-hidden">
+        <div class="h-[260px] overflow-hidden">
+          <img src="game.jpg" class="h-full w-full object-cover transition-transform duration-500 hover:scale-110" alt="Gaming Laptops">
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-3 font-['El_Messiri'] text-2xl">Gaming Laptops</h3>
+          <p class="mb-4 text-lg">High-performance gaming laptops with cutting-edge graphics and processors.</p>
+          <ul class="mb-6 space-y-2 text-lg">
+            <li>• NVIDIA RTX graphics</li>
+            <li>• High refresh rate displays</li>
+            <li>• Advanced cooling systems</li>
+          </ul>
+          <button class="request-quote mt-auto rounded-xl bg-[#3050c1] py-3 text-center text-xl text-white transition hover:scale-105 hover:bg-[#243e9e]" data-product="Gaming Laptops">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ultrabooks -->
+    <div class="rounded-3xl bg-gradient-to-br from-[#3050c1] via-[#6fa8ff] to-[#1fc8e1] p-[1.5px]" data-category="laptops">
+      <div class="flex h-full flex-col rounded-3xl bg-white overflow-hidden">
+        <div class="h-[260px] overflow-hidden">
+          <img src="ult.png" class="h-full w-full object-cover transition-transform duration-500 hover:scale-110" alt="Ultrabooks">
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-3 font-['El_Messiri'] text-2xl">Ultrabooks</h3>
+          <p class="mb-4 text-lg">Sleek, lightweight laptops perfect for professionals on the go.</p>
+          <ul class="mb-6 space-y-2 text-lg">
+            <li>• Ultra-portable design</li>
+            <li>• Premium build quality</li>
+            <li>• All-day battery life</li>
+          </ul>
+          <button class="request-quote mt-auto rounded-xl bg-[#3050c1] py-3 text-center text-xl text-white transition hover:scale-105 hover:bg-[#243e9e]" data-product="Ultrabooks">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Workstations -->
+    <div class="rounded-3xl bg-gradient-to-br from-[#3050c1] via-[#6fa8ff] to-[#1fc8e1] p-[1.5px]" data-category="desktops">
+      <div class="flex h-full flex-col rounded-3xl bg-white overflow-hidden">
+        <div class="h-[260px] overflow-hidden">
+          <img src="work.jpg" class="h-full w-full object-cover transition-transform duration-500 hover:scale-110" alt="Workstations">
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-3 font-['El_Messiri'] text-2xl">Workstations</h3>
+          <p class="mb-4 text-lg">Powerful desktop workstations for demanding professional applications.</p>
+          <ul class="mb-6 space-y-2 text-lg">
+            <li>• High-end processors</li>
+            <li>• Professional graphics cards</li>
+            <li>• Expandable configurations</li>
+          </ul>
+          <button class="request-quote mt-auto rounded-xl bg-[#3050c1] py-3 text-center text-xl text-white transition hover:scale-105 hover:bg-[#243e9e]" data-product="Workstations">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- All-in-One PCs -->
+    <div id="desktops" class="rounded-3xl bg-gradient-to-br from-[#3050c1] via-[#6fa8ff] to-[#1fc8e1] p-[1.5px]" data-category="desktops">
+      <div class="flex h-full flex-col rounded-3xl bg-white overflow-hidden">
+        <div class="h-[260px] overflow-hidden">
+          <img src="alino.jpg" class="h-full w-full object-cover transition-transform duration-500 hover:scale-110" alt="All-in-One PCs">
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-3 font-['El_Messiri'] text-2xl">All-in-One PCs</h3>
+          <p class="mb-4 text-lg">Space-saving all-in-one computers with integrated displays.</p>
+          <ul class="mb-6 space-y-2 text-lg">
+            <li>• Sleek design</li>
+            <li>• Touch screen options</li>
+            <li>• Minimal cable clutter</li>
+          </ul>
+          <button class="request-quote mt-auto rounded-xl bg-[#3050c1] py-3 text-center text-xl text-white transition hover:scale-105 hover:bg-[#243e9e]" data-product="All-in-One PCs">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Build PCs -->
+    <div class="rounded-3xl bg-gradient-to-br from-[#3050c1] via-[#6fa8ff] to-[#1fc8e1] p-[1.5px]" data-category="desktops">
+      <div class="flex h-full flex-col rounded-3xl bg-white overflow-hidden">
+        <div class="h-[260px] overflow-hidden">
+          <img src="cust.jpg" class="h-full w-full object-cover transition-transform duration-500 hover:scale-110" alt="Custom Build PCs">
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-3 font-['El_Messiri'] text-2xl">Custom Build PCs</h3>
+          <p class="mb-4 text-lg">Tailored desktop systems built to your exact specifications.</p>
+          <ul class="mb-6 space-y-2 text-lg">
+            <li>• Customizable components</li>
+            <li>• Optimized performance</li>
+            <li>• Budget-friendly options</li>
+          </ul>
+          <button class="request-quote mt-auto rounded-xl bg-[#3050c1] py-3 text-center text-xl text-white transition hover:scale-105 hover:bg-[#243e9e]" data-product="Custom Build PCs">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Printers -->
+    <div id="accessories" class="rounded-3xl bg-gradient-to-br from-[#3050c1] via-[#6fa8ff] to-[#1fc8e1] p-[1.5px]" data-category="accessories">
+      <div class="flex h-full flex-col rounded-3xl bg-white overflow-hidden">
+        <div class="h-[260px] overflow-hidden">
+          <img src="print.jpg" class="h-full w-full object-cover transition-transform duration-500 hover:scale-110" alt="Printers">
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-3 font-['El_Messiri'] text-2xl">Printers</h3>
+          <p class="mb-4 text-lg">Printing solutions for offices and businesses</p>
+          <ul class="mb-6 space-y-2 text-lg">
+            <li>• Inkjet & laser printers</li>
+            <li>• High-speed multi-function devices</li>
+            <li>• Network & wireless printing</li>
+          </ul>
+          <button class="request-quote mt-auto rounded-xl bg-[#3050c1] py-3 text-center text-xl text-white transition hover:scale-105 hover:bg-[#243e9e]" data-product="Printers">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Xerox Machines -->
+    <div class="rounded-3xl bg-gradient-to-br from-[#3050c1] via-[#6fa8ff] to-[#1fc8e1] p-[1.5px]" data-category="accessories">
+      <div class="flex h-full flex-col rounded-3xl bg-white overflow-hidden">
+        <div class="h-[260px] overflow-hidden">
+          <img src="xerox.jpg" class="h-full w-full object-cover transition-transform duration-500 hover:scale-110" alt="Xerox Machines">
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-3 font-['El_Messiri'] text-2xl">Xerox Machines</h3>
+          <p class="mb-4 text-lg">Document copying solutions for offices and businesses</p>
+          <ul class="mb-6 space-y-2 text-lg">
+            <li>• High-speed digital copiers</li>
+            <li>• Network-enabled multifunction machines</li>
+            <li>• Cost-efficient bulk printing</li>
+          </ul>
+          <button class="request-quote mt-auto rounded-xl bg-[#3050c1] py-3 text-center text-xl text-white transition hover:scale-105 hover:bg-[#243e9e]" data-product="Xerox Machines">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Peripherals -->
+    <div class="rounded-3xl bg-gradient-to-br from-[#3050c1] via-[#6fa8ff] to-[#1fc8e1] p-[1.5px]" data-category="accessories">
+      <div class="flex h-full flex-col rounded-3xl bg-white overflow-hidden">
+        <div class="h-[260px] overflow-hidden">
+          <img src="peri.jpg" class="h-full w-full object-cover transition-transform duration-500 hover:scale-110" alt="Peripherals">
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-3 font-['El_Messiri'] text-2xl">Peripherals</h3>
+          <p class="mb-4 text-lg">Premium keyboards, mice, and accessories for enhanced productivity.</p>
+          <ul class="mb-6 space-y-2 text-lg">
+            <li>• Mechanical keyboards</li>
+            <li>• Ergonomic mice</li>
+            <li>• Wireless options</li>
+          </ul>
+          <button class="request-quote mt-auto rounded-xl bg-[#3050c1] py-3 text-center text-xl text-white transition hover:scale-105 hover:bg-[#243e9e]" data-product="Peripherals">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Storage Solutions -->
+    <div class="rounded-3xl bg-gradient-to-br from-[#3050c1] via-[#6fa8ff] to-[#1fc8e1] p-[1.5px]" data-category="accessories">
+      <div class="flex h-full flex-col rounded-3xl bg-white overflow-hidden">
+        <div class="h-[260px] overflow-hidden">
+          <img src="storage.jpg" class="h-full w-full object-cover transition-transform duration-500 hover:scale-110" alt="Storage Solutions">
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-3 font-['El_Messiri'] text-2xl">Storage Solutions</h3>
+          <p class="mb-4 text-lg">External drives, SSDs, and storage devices for secure data management.</p>
+          <ul class="mb-6 space-y-2 text-lg">
+            <li>• High-speed SSDs</li>
+            <li>• Large capacity HDDs</li>
+            <li>• Portable storage</li>
+          </ul>
+          <button class="request-quote mt-auto rounded-xl bg-[#3050c1] py-3 text-center text-xl text-white transition hover:scale-105 hover:bg-[#243e9e]" data-product="Storage Solutions">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Network Equipment -->
+    <div class="rounded-3xl bg-gradient-to-br from-[#3050c1] via-[#6fa8ff] to-[#1fc8e1] p-[1.5px]" data-category="accessories">
+      <div class="flex h-full flex-col rounded-3xl bg-white overflow-hidden">
+        <div class="h-[260px] overflow-hidden">
+          <img src="wifi.jpg" class="h-full w-full object-cover transition-transform duration-500 hover:scale-110" alt="Network Equipment">
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-3 font-['El_Messiri'] text-2xl">Network Equipment</h3>
+          <p class="mb-4 text-lg">Routers, switches, and networking solutions for modern businesses.</p>
+          <ul class="mb-6 space-y-2 text-lg">
+            <li>• Enterprise-grade routers</li>
+            <li>• Managed switches</li>
+            <li>• Wi-Fi 6 technology</li>
+          </ul>
+          <button class="request-quote mt-auto rounded-xl bg-[#3050c1] py-3 text-center text-xl text-white transition hover:scale-105 hover:bg-[#243e9e]" data-product="Network Equipment">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CCTV Surveillance -->
+    <div class="rounded-3xl bg-gradient-to-br from-[#3050c1] via-[#6fa8ff] to-[#1fc8e1] p-[1.5px]" data-category="accessories">
+      <div class="flex h-full flex-col rounded-3xl bg-white overflow-hidden">
+        <div class="h-[260px] overflow-hidden">
+          <img src="cctv.jpg" class="h-full w-full object-cover transition-transform duration-500 hover:scale-110" alt="CCTV Surveillance">
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-3 font-['El_Messiri'] text-2xl">CCTV Surveillance</h3>
+          <p class="mb-4 text-lg">CCTV surveillance and security systems for businesses.</p>
+          <ul class="mb-6 space-y-2 text-lg">
+            <li>• HD IP cameras</li>
+            <li>• Night vision & motion detection</li>
+            <li>• Centralized DVR / NVR systems</li>
+          </ul>
+          <button class="request-quote mt-auto rounded-xl bg-[#3050c1] py-3 text-center text-xl text-white transition hover:scale-105 hover:bg-[#243e9e]" data-product="CCTV Surveillance">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LED TVs -->
+    <div class="rounded-3xl bg-gradient-to-br from-[#3050c1] via-[#6fa8ff] to-[#1fc8e1] p-[1.5px]" data-category="accessories">
+      <div class="flex h-full flex-col rounded-3xl bg-white overflow-hidden">
+        <div class="h-[260px] overflow-hidden">
+          <img src="led.jpg" class="h-full w-full object-cover transition-transform duration-500 hover:scale-110" alt="LED TVs">
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="mb-3 font-['El_Messiri'] text-2xl">LED TVs</h3>
+          <p class="mb-4 text-lg">LED television solutions for commercial and professional use.</p>
+          <ul class="mb-6 space-y-2 text-lg">
+            <li>• Full HD & 4K display panels</li>
+            <li>• Smart TV integration</li>
+            <li>• Wall-mount & large-screen options</li>
+          </ul>
+          <button class="request-quote mt-auto rounded-xl bg-[#3050c1] py-3 text-center text-xl text-white transition hover:scale-105 hover:bg-[#243e9e]" data-product="LED TVs">
+            Request Quote
+          </button>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="bg-gradient-to-br from-[#0f4679] via-[#2678e5] to-[#3fa9f5] py-20 text-center text-white px-6">
+  <h2 class="font-['El_Messiri'] text-4xl sm:text-5xl font-bold">
+    Need Help Choosing the Right Product?
+  </h2>
+  <p class="mt-6 text-lg opacity-90">
+    Our experts are ready to guide you. Contact us for personalized recommendations and quotes.
+  </p>
+  <a href="#" onclick="openExpertConsultation(); return false;" class="inline-flex mt-10 items-center gap-3 rounded-xl bg-white px-8 py-4 text-[#0f4679] text-lg transition hover:scale-105">
+    Get Expert Consultation →
+  </a>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-[#0B3C5D] text-white pt-20 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+    <div>
+      <img src="Taksh_-_Combine_Logo[1].png" class="w-40 mb-6" alt="Taksh Enterprise Logo">
+      <p class="text-white/80 text-sm">Trusted IT hardware partner since 1999.</p>
+    </div>
+
+    <div>
+      <h4 class="font-['El_Messiri'] text-xl font-bold mb-6">Quick Links</h4>
+      <ul class="space-y-3 text-white/80">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="aboutus9.html" class="hover:underline">About Us</a></li>
+        <li><a href="products8.html" class="hover:underline">Products</a></li>
+        <li><a href="services6.html" class="hover:underline">Services</a></li>
+        <li><a href="brands6.html" class="hover:underline">Brands</a></li>
+        <li><a href="contact8.html" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-['El_Messiri'] text-xl font-bold mb-6">Products</h4>
+      <ul class="space-y-3 text-white/80">
+        <li><a href="products8.html#laptops" class="hover:underline">Laptops</a></li>
+        <li><a href="products8.html#desktops" class="hover:underline">Desktops</a></li>
+        <li><a href="products8.html#accessories" class="hover:underline">Accessories</a></li>
+        <li><a href="products8.html#peripherals" class="hover:underline">Peripherals</a></li>
+        <li><a href="products8.html#custom-solutions" class="hover:underline">Custom Solutions</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-['El_Messiri'] text-xl font-bold mb-6">Contact</h4>
+      <p class="text-white/80 text-sm">
+        GF, B/15, Sardar Mall,<br>Nikol, Ahmedabad, Gujarat<br>India - 382350<br><br>
+        <a href="tel:+919099973373" class="hover:underline">+91 9099973373</a><br>
+        <a href="#" onclick="openSecureEmail(); return false;" class="hover:underline">takshenterprise1712@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="h-[180px] rounded-xl overflow-hidden border border-white/20">
+      <iframe
+        src="https://www.google.com/maps?q=SARDAR%20PATEL%20MALL,%20Nikol%20Gam%20Rd,%20Suradhara%20Society,%20Thakkarbapanagar,%20Khodiar%20Nagar,%20Ahmedabad,%20Gujarat%20382350,%20India&output=embed"
+        class="w-full h-full border-0"
+        loading="lazy"
+        title="Taksh Enterprise Location"
+        referrerpolicy="no-referrer-when-downgrade">
+     </iframe>
+    </div>
+
+  </div>
+
+  <div class="border-t border-white/20 mt-16 py-6 text-center text-white/70 text-sm">
+    © 2025 Taksh Enterprise. All rights reserved.
+  </div>
+</footer>
+
+<!-- ================= QUANTITY MODAL ================= -->
+<div id="quoteModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 px-4">
+  <div class="w-full max-w-lg rounded-3xl bg-white p-8 shadow-xl animate-fade-in">
+    <h3 class="mb-6 text-3xl text-[#0B3558]" style="font-family: El Messiri;">Request Price Quote</h3>
+    <p id="selectedProduct" class="mb-6 text-lg text-gray-600" style="font-family: Electrolize;"></p>
+    <input id="quoteQuantity" type="number" min="1" max="10000" step="1" pattern="[0-9]+" placeholder="Required Quantity" class="mb-5 w-full rounded-xl bg-[#F3F8FF] px-5 py-4 outline-none" oninput="this.value = Math.abs(Math.floor(this.value))" />
+    <select id="quoteCondition" class="mb-5 w-full rounded-xl bg-[#F3F8FF] px-5 py-4 outline-none">
+      <option value="" disabled selected>Condition (New / Refurbished)</option>
+      <option value="New">New</option>
+      <option value="Refurbished">Refurbished</option>
+    </select>
+    <textarea id="quoteNotes" rows="4" placeholder="Additional requirements (optional)" class="mb-6 w-full resize-none rounded-xl bg-[#F3F8FF] px-5 py-4 outline-none" maxlength="500"></textarea>
+    <div class="flex gap-4">
+      <button onclick="closeQuoteModal()" class="w-1/2 rounded-xl border border-gray-300 py-3 text-lg transition hover:bg-gray-100">Cancel</button>
+      <button id="sendWhatsappBtn" onclick="sendToWhatsApp()" class="w-full rounded-xl bg-[#25D366] py-4 text-white transition hover:scale-[1.02]" style="font-family: El Messiri, sans-serif;">Send on WhatsApp</button>
+      <button id="backToProductsBtn" onclick="closeQuoteModal()" class="hidden mt-6 w-full rounded-xl border border-[#114980] py-3 text-[#114980] transition hover:bg-[#114980] hover:text-white" style="font-family: El Messiri, sans-serif;">← Back to Products</button>
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS TOAST -->
+<div id="whatsappToast" class="fixed bottom-6 right-6 z-[9999] hidden rounded-2xl bg-[#114980] px-6 py-4 text-white shadow-2xl transition-all duration-300" style="font-family: Electrolize, sans-serif;">
+  Redirecting to WhatsApp…
+</div>
+
+<!-- ================= SECURE JAVASCRIPT ================= -->
+<script>
+(function() {
+  'use strict';
+
+  // Obfuscated phone number for security
+  const WHATSAPP_NUMBER = atob("OTE5MDk5OTczMzcz");
+
+  // Input sanitization function
+  function sanitizeInput(str) {
+    if (typeof str !== 'string') return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML.replace(/[<>'"]/g, '').substring(0, 500);
+  }
+
+  // Secure email function
+  window.openSecureEmail = function() {
+    const validEmail = 'takshenterprise1712@gmail.com';
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    if (!emailRegex.test(validEmail)) {
+      console.error('Invalid email format');
+      return;
+    }
+    
+    const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(validEmail);
+    const newWindow = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+    
+    if (!newWindow) {
+      alert('Please allow pop-ups to send us an email');
+    }
+  };
+
+  // Secure WhatsApp function
+  function openSecureWhatsApp(message) {
+    if (typeof message !== 'string' || message.length > 2000) {
+      console.error('Invalid message');
+      return;
+    }
+    
+    const phoneRegex = /^[0-9]{10,15}$/;
+    if (!phoneRegex.test(WHATSAPP_NUMBER)) {
+      console.error('Invalid phone number');
+      return;
+    }
+    
+    const sanitized = sanitizeInput(message).substring(0, 2000);
+    const encodedMessage = encodeURIComponent(sanitized);
+    const url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodedMessage;
+    
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    if (!newWindow) {
+      alert('Please allow pop-ups to contact us via WhatsApp');
+    }
+  }
+
+  // Filter functionality
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll("[data-category]");
+
+  buttons.forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      buttons.forEach(function(b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+
+      const filter = btn.dataset.filter;
+
+      cards.forEach(function(card) {
+        if (filter === "all" || card.dataset.category === filter) {
+          card.classList.remove("product-card-hidden");
+        } else {
+          card.classList.add("product-card-hidden");
+        }
+      });
+    });
+  });
+
+  // Hash-based filtering
+  window.addEventListener("DOMContentLoaded", function() {
+    const hash = window.location.hash.replace("#", "");
+    if (!hash) return;
+
+    const filterBtn = document.querySelector('.filter-btn[data-filter="' + hash + '"]');
+    
+    if (filterBtn) {
+      buttons.forEach(function(b) { b.classList.remove("active"); });
+      filterBtn.classList.add("active");
+
+      cards.forEach(function(card) {
+        if (card.dataset.category === hash) {
+          card.classList.remove("product-card-hidden");
+        } else {
+          card.classList.add("product-card-hidden");
+        }
+      });
+    }
+  });
+
+  // Quote modal functionality
+  const quoteModal = document.getElementById("quoteModal");
+  const selectedProductText = document.getElementById("selectedProduct");
+  const quantityInput = document.getElementById("quoteQuantity");
+  const notesInput = document.getElementById("quoteNotes");
+  const conditionInput = document.getElementById("quoteCondition");
+  let activeQuoteButton = null;
+
+  document.querySelectorAll(".request-quote").forEach(function(button) {
+    button.addEventListener("click", function() {
+      const productName = button.getAttribute("data-product");
+      activeQuoteButton = button;
+
+      selectedProductText.innerText = "Product: " + sanitizeInput(productName);
+      quantityInput.value = "";
+      conditionInput.value = "";
+      notesInput.value = "";
+
+      quoteModal.classList.remove("hidden");
+      quoteModal.classList.add("flex");
+    });
+  });
+
+  window.closeQuoteModal = function() {
+    quoteModal.classList.add("hidden");
+    quoteModal.classList.remove("flex");
+  };
+
+  window.sendToWhatsApp = function() {
+    const sendBtn = document.getElementById("sendWhatsappBtn");
+    const toast = document.getElementById("whatsappToast");
+    const backBtn = document.getElementById("backToProductsBtn");
+
+    const product = selectedProductText.innerText.replace("Product: ", "");
+    const qtyValue = quantityInput.value;
+    const condition = conditionInput.value;
+    const notes = notesInput.value;
+
+    // Validation
+    const qty = parseInt(qtyValue);
+    if (isNaN(qty) || qty < 1 || qty > 10000) {
+      alert("Please enter a valid quantity between 1 and 10,000");
+      return;
+    }
+
+    if (!condition) {
+      alert("Please select product condition (New or Refurbished)");
+      return;
+    }
+
+    // Disable button
+    sendBtn.disabled = true;
+    sendBtn.innerText = "Redirecting…";
+    sendBtn.classList.add("opacity-60", "cursor-not-allowed");
+
+    const sanitizedProduct = sanitizeInput(product);
+    const sanitizedNotes = sanitizeInput(notes) || "None";
+    const sanitizedCondition = sanitizeInput(condition);
+
+    const message = 
+      "Hello Taksh Enterprise,\n\n" +
+      "Product: " + sanitizedProduct + "\n" +
+      "Condition: " + sanitizedCondition + "\n" +
+      "Quantity: " + qty + "\n\n" +
+      "Additional Notes:\n" + sanitizedNotes + "\n\n" +
+      "Please provide a price quote. Thank you!";
+
+    openSecureWhatsApp(message);
+
+    if (activeQuoteButton) {
+      activeQuoteButton.innerText = "Sent!";
+      activeQuoteButton.classList.remove("bg-[#3050c1]", "hover:bg-[#243e9e]");
+      activeQuoteButton.classList.add("bg-green-600", "cursor-default");
+      activeQuoteButton.disabled = true;
+    }
+
+    toast.classList.remove("hidden");
+    toast.classList.add("animate-fade-in");
+    backBtn.classList.remove("hidden");
+
+    setTimeout(function() {
+      closeQuoteModal();
+      toast.classList.add("hidden");
+      sendBtn.disabled = false;
+      sendBtn.innerText = "Send on WhatsApp";
+      sendBtn.classList.remove("opacity-60", "cursor-not-allowed");
+      backBtn.classList.add("hidden");
+    }, 1500);
+  };
+
+  window.openExpertConsultation = function() {
+    const message = "Hello Taksh Enterprise,\n\nI need expert consultation for IT products.\n\nPlease guide me with suitable options.\n\nThank you!";
+    openSecureWhatsApp(message);
+  };
+
+})();
+</script>
+
+</body>
+</html>

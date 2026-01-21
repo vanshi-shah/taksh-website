@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Taksh Enterprise</title>
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" 
+        content="default-src 'self'; 
+                 script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; 
+                 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; 
+                 font-src 'self' https://fonts.gstatic.com; 
+                 img-src 'self' data: https:; 
+                 frame-src https://www.google.com; 
+                 connect-src 'self';">
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <!-- HTTPS Enforcement -->
+  <script>
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+    }
+  </script>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&family=Electrolize&display=swap" rel="stylesheet">
+
+  <!-- TAILWIND CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .nav-item {
+      font-family: 'Electrolize', sans-serif;
+      padding: 8px 18px;
+      border-radius: 999px;
+      transition: all 0.3s ease;
+      color: #0B2C4D;
+    }
+    .nav-item:hover{
+        background: #B3D9FF;
+        color: #0B2C4D;
+    }
+    .nav-item.active {
+      background: #2F86EA;
+      color: #fff;
+    }
+    .check-circle {
+      stroke-dasharray: 157;
+      stroke-dashoffset: 157;
+      animation: draw-circle 0.8s ease-out forwards;
+    }
+    .check-path {
+      stroke-dasharray: 48;
+      stroke-dashoffset: 48;
+      animation: draw-check 0.4s ease-out forwards;
+      animation-delay: 0.8s;
+    }
+    @keyframes draw-circle {
+      to { stroke-dashoffset: 0; }
+    }
+    @keyframes draw-check {
+      to { stroke-dashoffset: 0; }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black">
+
+<!-- ================= NAVBAR ================= -->
+<header class="bg-[#DDF3FF] sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <!-- Brand -->
+    <div class="font-['El_Messiri'] text-2xl font-bold text-[#0B2C4D]">
+      Taksh Enterprise
+    </div>
+
+    <!-- Navigation -->
+    <div class="flex gap-6 flex-wrap justify-center">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="aboutus9.html" class="nav-item">About us</a>
+      <a href="products8.html" class="nav-item">Products</a>
+      <a href="services6.html" class="nav-item">Services</a>
+      <a href="brands6.html" class="nav-item">Brands</a>
+      <a href="contact8.html" class="nav-item active">Contact</a>
+    </div>
+
+  </nav>
+</header>
+
+<!-- ================= HERO CONNECT ================= -->
+<section class="relative bg-gradient-to-r from-[#114980] via-[#2a81e8] to-[#3fa9f5] text-white py-24 px-6 text-center">
+  <h1 class="text-6xl font-bold mb-6" style="font-family: El Messiri;">
+    LET'S CONNECT
+  </h1>
+  <p class="text-2xl max-w-4xl mx-auto" style="font-family: Electrolize;">
+    Have questions? We're here to help. Contact us for expert guidance on IT hardware solutions.
+  </p>
+</section>
+
+<!-- ================= CONTACT INFO CARDS ================= -->
+<section class="bg-[#f5f9ff] py-20 px-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10">
+
+    <a href="https://www.google.com/maps/search/?api=1&query=GF,+B/15,+Sardar+Mall,+Nikol,+Ahmedabad,+Gujarat+382350" target="_blank" rel="noopener noreferrer" class="group bg-white rounded-3xl p-10 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(17,73,128,0.25)]">
+      <div class="mx-auto mb-6 w-16 h-16 flex items-center justify-center rounded-full bg-[#2A81E8] text-white group-hover:scale-110 transition">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7">
+          <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 1 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-4 text-[#0B3558]" style="font-family: El Messiri;">Visit Us</h3>
+      <p class="text-lg text-gray-600" style="font-family: Electrolize;">
+        GF, B/15, Sardar Mall<br>Nikol, Ahmedabad<br>Gujarat, India - 382350
+      </p>
+    </a>
+
+    <a href="tel:+919099973373" class="group bg-white rounded-3xl p-10 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(17,73,128,0.25)]">
+      <div class="mx-auto mb-6 w-16 h-16 flex items-center justify-center rounded-full bg-[#2A81E8] text-white group-hover:scale-110 transition">
+        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 A19.79 19.79 0 0 1 2.11 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72l.5 3a2 2 0 0 1-1.09 2.18l-1.27.64a16 16 0 0 0 6.88 6.88l.64-1.27a2 2 0 0 1 2.18-1.09l3 .5a2 2 0 0 1 1.72 2z"/>
+        </svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-4 text-[#0B3558]" style="font-family: El Messiri;">Call Us</h3>
+      <p class="text-lg text-gray-600" style="font-family: Electrolize;">
+        +91 9099973373<br>Jatin Shah
+      </p>
+    </a>
+
+    <a href="#" onclick="openSecureWhatsApp(); return false;" class="group bg-white rounded-3xl p-10 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(17,73,128,0.25)]">
+      <div class="mx-auto mb-6 w-16 h-16 flex items-center justify-center rounded-full bg-[#2A81E8] text-white group-hover:scale-110 transition">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
+          <path d="M12.04 2C6.58 2 2.1 6.48 2.1 11.94c0 1.95.5 3.86 1.45 5.55L2 22l4.65-1.52a9.87 9.87 0 0 0 5.39 1.56h.01c5.46 0 9.94-4.48 9.94-9.94S17.5 2 12.04 2zm5.78 14.27c-.24.67-1.4 1.27-1.92 1.35-.49.07-1.12.1-1.81-.11-.42-.13-.97-.31-1.67-.61-2.95-1.27-4.87-4.23-5.02-4.43-.14-.2-1.2-1.6-1.2-3.05s.76-2.16 1.03-2.45c.27-.29.59-.36.78-.36h.56c.18 0 .42-.07.66.5.24.57.83 2 .9 2.14.07.14.12.31.02.5-.1.2-.15.31-.3.48-.14.17-.3.38-.43.5-.14.14-.28.29-.12.57.15.29.67 1.1 1.44 1.78.99.88 1.82 1.15 2.11 1.28.29.14.45.12.62-.07.17-.2.71-.83.9-1.12.19-.29.38-.24.64-.14.26.1 1.66.78 1.94.92.29.14.48.22.55.34.07.12.07.69-.17 1.36z"/>
+        </svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-4 text-[#0B3558]" style="font-family: El Messiri;">WhatsApp Us</h3>
+      <p class="text-lg text-gray-600" style="font-family: Electrolize;">
+        +91 9099973373<br>Chat with Jatin Shah
+      </p>
+    </a>
+
+    <a href="#" onclick="openSecureEmail(); return false;" class="group bg-white rounded-3xl p-10 text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(17,73,128,0.25)]">
+      <div class="mx-auto mb-6 w-16 h-16 flex items-center justify-center rounded-full bg-[#2A81E8] text-white group-hover:scale-110 transition">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-4 text-[#0B3558]" style="font-family: El Messiri, sans-serif;">Email Us</h3>
+      <p class="text-lg text-gray-600" style="font-family: Electrolize, sans-serif;">takshenterprise1712@gmail.com</p>
+    </a>
+  </div>
+</section>
+
+<!-- ================= CONTACT FORM ================= -->
+<section class="bg-white px-6 py-20">
+  <div class="max-w-4xl mx-auto">
+    <div id="form-wrapper" class="transition-all duration-500 ease-out">
+      <h2 class="text-5xl font-bold mb-4 text-[#0B3558]" style="font-family: El Messiri, sans-serif;">Send Us a Message</h2>
+      <p class="text-gray-600 mb-10" style="font-family: Electrolize, sans-serif;">Fill out the form below and our team will get back to you within 24 hours.</p>
+      <form id="contactForm" class="space-y-8 transition-all duration-500">
+        <input required name="name" placeholder="Full Name" maxlength="100" class="w-full rounded-xl bg-[#F3F8FF] px-5 py-4">
+        <input required type="email" name="email" placeholder="Email Address" maxlength="100" class="w-full rounded-xl bg-[#F3F8FF] px-5 py-4">
+        <input name="phone" placeholder="Phone Number" maxlength="15" pattern="[0-9+\-\s]*" class="w-full rounded-xl bg-[#F3F8FF] px-5 py-4">
+        <input required name="subject" placeholder="Subject" maxlength="200" class="w-full rounded-xl bg-[#F3F8FF] px-5 py-4">
+        <textarea required name="message" rows="5" placeholder="Tell us about your requirements..." maxlength="1000" class="w-full rounded-xl bg-[#F3F8FF] px-5 py-4 resize-none"></textarea>
+        <button id="submitBtn" type="submit" class="w-full bg-blue-600 hover:bg-blue-700 transition text-white py-4 rounded-xl text-lg font-medium shadow-lg hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed">
+          Send Message →
+        </button>
+      </form>
+    </div>
+
+    <div id="thankYouMessage" class="hidden flex flex-col items-center justify-center text-center min-h-[420px] opacity-0 translate-y-6 transition-all duration-700 ease-out">
+      <div class="mb-10">
+        <svg class="w-32 h-32 text-green-600 mx-auto" viewBox="0 0 52 52">
+          <circle cx="26" cy="26" r="25" fill="none" stroke="currentColor" stroke-width="3" class="check-circle"/>
+          <path fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M14 27l7 7 17-17" class="check-path"/>
+        </svg>
+      </div>
+      <h3 class="text-6xl mb-6 text-[#0B3558]" style="font-family: El Messiri, sans-serif;">Thank you for your response</h3>
+      <p class="text-3xl text-gray-600" style="font-family: Electrolize, sans-serif;">We will get back to you shortly!</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY CONTACT US ================= -->
+<section class="relative bg-white border border-[rgba(0,0,0,0.1)] overflow-hidden px-6 py-20">
+  <div class="max-w-6xl mx-auto relative">
+    <h2 class="text-[64px] font-normal mb-8 text-black" style="font-family: El Messiri, sans-serif;">Why Contact Us?</h2>
+    <p class="text-[32px] mb-10" style="font-family: Ek Mukta, sans-serif;">Our team of IT hardware experts is ready to assist you with:</p>
+    <div class="space-y-4 text-[32px]" style="font-family: Electrolize, sans-serif;">
+      <ul class="list-disc list-inside">
+        <li>Product recommendations based on your needs</li>
+        <li>Custom quotes for individual or bulk orders</li>
+        <li>Technical specifications and comparisons</li>
+        <li>Corporate and institutional partnerships</li>
+        <li>Warranty and support information</li>
+        <li>Special pricing for large volume orders</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ SECTION ================= -->
+<section class="bg-[#f5f9ff] py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14">
+      <h2 class="text-4xl sm:text-5xl font-bold text-[#0B3558]" style="font-family: El Messiri, sans-serif;">Frequently Asked Questions</h2>
+      <p class="mt-4 text-lg text-gray-600" style="font-family: Electrolize, sans-serif;">Quick answers to common questions</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(17,73,128,0.18)]">
+        <h3 class="text-xl font-bold text-[#0B3558] mb-4" style="font-family: El Messiri, sans-serif;">Do you offer bulk discounts for corporate orders?</h3>
+        <p class="text-gray-600 text-base leading-relaxed" style="font-family: Electrolize, sans-serif;">Yes, we provide special pricing for bulk orders and corporate clients. Contact us with your requirements for a custom quote.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(17,73,128,0.18)]">
+        <h3 class="text-xl font-bold text-[#0B3558] mb-4" style="font-family: El Messiri, sans-serif;">What payment methods do you accept?</h3>
+        <p class="text-gray-600 text-base leading-relaxed" style="font-family: Electrolize, sans-serif;">We accept bank transfers, cash, checks, and online payment methods. For corporate clients, we also offer credit terms.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(17,73,128,0.18)]">
+        <h3 class="text-xl font-bold text-[#0B3558] mb-4" style="font-family: El Messiri, sans-serif;">Do you provide warranty support?</h3>
+        <p class="text-gray-600 text-base leading-relaxed" style="font-family: Electrolize, sans-serif;">All products come with manufacturer warranty. We assist with warranty claims and provide support throughout the warranty period.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(17,73,128,0.18)]">
+        <h3 class="text-xl font-bold text-[#0B3558] mb-4" style="font-family: El Messiri, sans-serif;">How long does delivery take?</h3>
+        <p class="text-gray-600 text-base leading-relaxed" style="font-family: Electrolize, sans-serif;">Delivery timelines vary based on product availability and location. Typically, in-stock items are delivered within 2–5 business days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-[#0B3C5D] text-white pt-20 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+    <div>
+      <img src="Taksh_-_Combine_Logo[1].png" class="w-40 mb-6" alt="Taksh Enterprise Logo">
+      <p class="text-white/80 text-sm">Trusted IT hardware partner since 1999.</p>
+    </div>
+
+    <div>
+      <h4 class="font-['El_Messiri'] text-xl font-bold mb-6">Quick Links</h4>
+      <ul class="space-y-3 text-white/80">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="aboutus9.html" class="hover:underline">About Us</a></li>
+        <li><a href="products8.html" class="hover:underline">Products</a></li>
+        <li><a href="services6.html" class="hover:underline">Services</a></li>
+        <li><a href="brands6.html" class="hover:underline">Brands</a></li>
+        <li><a href="contact8.html" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-['El_Messiri'] text-xl font-bold mb-6">Products</h4>
+      <ul class="space-y-3 text-white/80">
+        <li><a href="products8.html#laptops" class="hover:underline">Laptops</a></li>
+        <li><a href="products8.html#desktops" class="hover:underline">Desktops</a></li>
+        <li><a href="products8.html#accessories" class="hover:underline">Accessories</a></li>
+        <li><a href="products8.html#peripherals" class="hover:underline">Peripherals</a></li>
+        <li><a href="products8.html#custom-solutions" class="hover:underline">Custom Solutions</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-['El_Messiri'] text-xl font-bold mb-6">Contact</h4>
+      <p class="text-white/80 text-sm">
+        GF, B/15, Sardar Mall,<br>Nikol, Ahmedabad, Gujarat<br>India - 382350<br><br>
+        <a href="tel:+919099973373" class="hover:underline">+91 9099973373</a><br>
+        <a href="#" onclick="openSecureEmail(); return false;" class="hover:underline">takshenterprise1712@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="h-[180px] rounded-xl overflow-hidden border border-white/20">
+      <iframe
+        src="https://www.google.com/maps?q=SARDAR%20PATEL%20MALL,%20Nikol%20Gam%20Rd,%20Suradhara%20Society,%20Thakkarbapanagar,%20Khodiar%20Nagar,%20Ahmedabad,%20Gujarat%20382350,%20India&output=embed"
+        class="w-full h-full border-0"
+        loading="lazy"
+        title="Taksh Enterprise Location"
+        referrerpolicy="no-referrer-when-downgrade">
+     </iframe>
+    </div>
+
+  </div>
+
+  <div class="border-t border-white/20 mt-16 py-6 text-center text-white/70 text-sm">
+    © 2025 Taksh Enterprise. All rights reserved.
+  </div>
+</footer>
+<!-- ================= SECURE JAVASCRIPT ================= -->
+<script>
+(function() {
+  'use strict';
+
+  const WHATSAPP_NUMBER = atob("OTE5MDk5OTczMzcz");
+
+  function sanitizeInput(str) {
+    if (typeof str !== 'string') return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML.replace(/[<>'"]/g, '').substring(0, 500);
+  }
+
+  window.openSecureEmail = function() {
+    const validEmail = 'takshenterprise1712@gmail.com';
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    if (!emailRegex.test(validEmail)) {
+      console.error('Invalid email format');
+      return;
+    }
+    
+    const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(validEmail);
+    const newWindow = window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+    
+    if (!newWindow) {
+      alert('Please allow pop-ups to send us an email');
+    }
+  };
+
+  window.openSecureWhatsApp = function() {
+    const phoneRegex = /^[0-9]{10,15}$/;
+    if (!phoneRegex.test(WHATSAPP_NUMBER)) {
+      console.error('Invalid phone number');
+      return;
+    }
+    
+    const message = "Hello Taksh Enterprise,\n\nI would like to connect with you.\n\nThank you!";
+    const encodedMessage = encodeURIComponent(message);
+    const url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodedMessage;
+    
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    if (!newWindow) {
+      alert('Please allow pop-ups to contact us via WhatsApp');
+    }
+  };
+
+  const form = document.getElementById("contactForm");
+  const button = document.getElementById("submitBtn");
+  const formWrapper = document.getElementById("form-wrapper");
+  const thankYou = document.getElementById("thankYouMessage");
+
+  const formSubmissions = {
+    count: 0,
+    lastSubmit: 0,
+    limit: 3,
+    window: 300000
+  };
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const now = Date.now();
+
+    if (now - formSubmissions.lastSubmit > formSubmissions.window) {
+      formSubmissions.count = 0;
+    }
+
+    if (formSubmissions.count >= formSubmissions.limit) {
+      alert("Too many submissions. Please try again in a few minutes.");
+      return;
+    }
+
+    formSubmissions.count++;
+    formSubmissions.lastSubmit = now;
+
+    button.disabled = true;
+    button.innerText = "Opening WhatsApp...";
+
+    const name = sanitizeInput(form.name.value);
+    const email = sanitizeInput(form.email.value);
+    const phone = sanitizeInput(form.phone.value);
+    const subject = sanitizeInput(form.subject.value);
+    const message = sanitizeInput(form.message.value);
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address");
+      button.disabled = false;
+      button.innerText = "Send Message →";
+      return;
+    }
+
+    const whatsappMessage = 
+      "Hello Taksh Enterprise\n\n" +
+      "*New Query Submission*\n\n" +
+      "Name: " + name + "\n" +
+      "Email: " + email + "\n" +
+      "Phone: " + phone + "\n" +
+      "Subject: " + subject + "\n\n" +
+      "Message:\n" + message;
+
+    const phoneRegex = /^[0-9]{10,15}$/;
+    if (!phoneRegex.test(WHATSAPP_NUMBER)) {
+      console.error('Invalid phone number');
+      return;
+    }
+
+    const whatsappURL = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(whatsappMessage);
+
+    formWrapper.classList.add("opacity-0", "translate-y-6");
+
+    setTimeout(function() {
+      formWrapper.classList.add("hidden");
+      thankYou.classList.remove("hidden");
+
+      setTimeout(function() {
+        thankYou.classList.remove("opacity-0", "translate-y-6");
+      }, 50);
+
+      window.open(whatsappURL, "_blank", "noopener,noreferrer");
+
+      setTimeout(function() {
+        window.location.reload();
+      }, 20000);
+    }, 500);
+  });
+
+})();
+</script>
+
+</body>
+</html>
