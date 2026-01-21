@@ -58,14 +58,24 @@
 <!-- ================= NAVBAR ================= -->
 <header class="bg-[#DDF3FF] sticky top-0 z-50">
   <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    
+
     <!-- Brand -->
     <div class="font-['El_Messiri'] text-2xl font-bold text-[#0B2C4D]">
       Taksh Enterprise
     </div>
 
-    <!-- Navigation -->
-    <div class="flex gap-6 flex-wrap justify-center">
+    <!-- Hamburger (mobile only) -->
+    <button id="menuBtn" class="md:hidden focus:outline-none">
+      <svg class="w-8 h-8 text-[#0B2C4D]" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </button>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex gap-6">
       <a href="index.html" class="nav-item active">Home</a>
       <a href="aboutus9.html" class="nav-item">About us</a>
       <a href="products8.html" class="nav-item">Products</a>
@@ -73,8 +83,17 @@
       <a href="brands6.html" class="nav-item">Brands</a>
       <a href="contact8.html" class="nav-item">Contact</a>
     </div>
-
   </nav>
+
+  <!-- Mobile Dropdown -->
+  <div id="mobileMenu" class="hidden md:hidden bg-[#DDF3FF] px-6 pb-6 space-y-3">
+    <a href="index.html" class="block nav-item active">Home</a>
+    <a href="aboutus9.html" class="block nav-item">About us</a>
+    <a href="products8.html" class="block nav-item">Products</a>
+    <a href="services6.html" class="block nav-item">Services</a>
+    <a href="brands6.html" class="block nav-item">Brands</a>
+    <a href="contact8.html" class="block nav-item">Contact</a>
+  </div>
 </header>
 
 
@@ -347,7 +366,16 @@
 
 })();
 </script>
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
 
 </body>
 
 </html>
+
